@@ -5,7 +5,9 @@
   "scripts": {
     "start": "node ./dist/bin/www",
     "dev": "tsx --watch ./src/bin/www.ts",
-    "build": "tsc"
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "nodemon src/index.ts"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -13,15 +15,35 @@
     "debug": "~2.6.9",
     "dotenv": "^17.3.1",
     "express": "^4.22.1",
+    "mongoose": "^9.3.1",
     "morgan": "^1.10.1",
-    "tsx": "^4.21.0",
-    "typescript": "^5.9.3"
+    "tsx": "^4.21.0"
   },
   "devDependencies": {
     "@types/cors": "^2.8.19",
     "@types/debug": "^4.1.12",
     "@types/dotenv": "^6.1.1",
     "@types/express": "^5.0.6",
-    "@types/node": "^25.4.0"
-  }
+    "@types/mongoose": "^5.11.96",
+    "@types/node": "^25.5.0",
+    "nodemon": "^3.1.14",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  },
+  "description": "Witaj w zaawansowanym repozytorium backendu **Muminkopedii**. System budujemy w oparciu o architekturę warstwową, przygotowując grunt pod nowoczesny frontend w React (CSR).",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/minipiriolek/muminkopedia_Malicki-Haponik.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/minipiriolek/muminkopedia_Malicki-Haponik/issues"
+  },
+  "homepage": "https://github.com/minipiriolek/muminkopedia_Malicki-Haponik#readme"
 }
