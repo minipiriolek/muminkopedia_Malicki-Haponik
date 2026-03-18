@@ -5,9 +5,7 @@
   "scripts": {
     "start": "node ./dist/bin/www",
     "dev": "tsx --watch ./src/bin/www.ts",
-    "build": "tsc",
-    "start": "node dist/index.js",
-    "dev": "nodemon src/index.ts"
+    "build": "tsc"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
