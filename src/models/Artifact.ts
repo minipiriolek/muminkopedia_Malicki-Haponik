@@ -1,15 +1,28 @@
-import mongoose, {Document, Types} from "mongoose";
+import mongoose, { Schema, Document, Types } from "mongoose";
 
-export interface Artifact extends Document { //extends Document dla funkcji operacji na danych np. zapis do bazy za pomocą gotowej metody
+export interface IArtifact extends Document {
     name: string;
     properties: string;
     owner: Types.ObjectId;
 }
 
-const ArtifactSchema = new mongoose.Schema({
-    name: {type: String, required: true},
-    properties: {type: String, required: true},
-    owner: {type: Types.ObjectId, required: true},
-})
+const ArtifactSchema = new Schema<IArtifact>({
+    name: {
+        type: String,
+        required: true,
+        trim: true
+    },
+    properties: {
+        type: String,
+        required: true
+    },
+    owner: {
+        type: Schema.Types.ObjectId,
+        ref: 'Character',
+        required: true
+    },
+}, {
+    timestamps: true
+});
 
-export default mongoose.model<Artifact>("Artifact", ArtifactSchema);
+export default mongoose.model<IArtifact>("Artifact", ArtifactSchema);

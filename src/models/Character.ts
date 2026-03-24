@@ -1,19 +1,41 @@
-import mongoose, {Document, Types} from "mongoose";
+import mongoose, { Schema, Document, Types } from "mongoose";
 
-export interface Character extends Document{
+export interface ICharacter extends Document {
     name: string;
     description: string;
-    species: string;
+    species: 'Muminek' | 'Paszczak' | 'Miukk' | 'Ryjek' | 'Inny';
     isHibernating: boolean;
-    bestFriend: Types.ObjectId;
+    bestFriend?: Types.ObjectId;
 }
 
-const CharacterSchema = new mongoose.Schema({
-    name: { type: String, required: true },
-    description: { type: String, required: true },
-    species: { type: String, required: true },
-    isHibernating:{ type: Boolean, default: false }, // domyślnie muminki nie śpią
-    bestFriend: { type: Types.ObjectId, required: false },
-})
+const CharacterSchema = new Schema<ICharacter>({
+    name: {
+        type: String,
+        required: true,
+        unique: true,
+        trim: true
+    },
+    description: {
+        type: String,
+        required: true
+    },
+    species: {
+        type: String,
+        required: true,
+        enum: ['Muminek', 'Paszczak', 'Miukk', 'Ryjek', 'Inny'],
+        default: 'Inny'
+    },
+    isHibernating: {
+        type: Boolean,
+        default: false
+    },
+    bestFriend: {
+        type: Schema.Types.ObjectId,
+        ref: 'Character',
+        required: false
+    },
+}, {
+    timestamps: true
+});
 
-export default mongoose.model<Character>("Character", CharacterSchema);
+export default mongoose.model<ICharacter>("Character", CharacterSchema);
