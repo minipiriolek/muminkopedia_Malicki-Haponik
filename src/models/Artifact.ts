@@ -6,7 +6,7 @@ export interface IArtifact extends Document {
     owner: Types.ObjectId;
 }
 
-const ArtifactSchema = new Schema<IArtifact>({
+const ArtifactSchema = new mongoose.Schema({
     name: {
         type: String,
         required: true,
