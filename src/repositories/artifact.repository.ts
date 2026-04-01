@@ -14,6 +14,6 @@ export async function updateArtifactById(id: string, updateData: Partial<IArtifa
     return ArtifactSchema.findByIdAndUpdate(id, updateData, {returnDocument: "after"})
 }
 
-export async function deleteArtifact(id: string): Promise<IArtifact | null>{
+export async function deleteArtifactById(id: string): Promise<IArtifact | null>{
     return ArtifactSchema.findByIdAndDelete(id)
 }
