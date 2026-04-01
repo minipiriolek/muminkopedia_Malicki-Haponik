@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Złota Harmonijka",
+    "properties": "Wydaje najpiękniejsze dźwięki w całej Dolinie. Przywołuje wspomnienia z dalekich podróży.",
+    "owner": "Włóczykij"
+  },
+  {
+    "name": "Czarna Torebka",
+    "properties": "Mieści wszystko: od skarpetek po konfitury. Nigdy nie jest pusta w kryzysowych sytuacjach.",
+    "owner": "Mama Muminka"
+  },
+  {
+    "name": "Maszyna do Pisania",
+    "properties": "Służy do spisywania wielkich przygód i wspomnień Taty Muminka.",
+    "owner": "Tata Muminka"
+  },
+  {
+    "name": "Wysoki Cylinder",
+    "properties": "Czarny, elegancki kapelusz, który dodaje powagi każdemu pisarzowi.",
+    "owner": "Tata Muminka"
+  },
+  {
+    "name": "Lupa Botaniczna",
+    "properties": "Pozwala dostrzec najmniejsze pręciki rzadkich roślin. Niezbędna do badań naukowych.",
+    "owner": "Paszczak"
+  },
+  {
+    "name": "Srebrna Taca",
+    "properties": "Bardzo błyszczący przedmiot, który Ryjek uważa za swój największy skarb.",
+    "owner": "Ryjek"
+  },
+  {
+    "name": "Kapelusz Włóczykija",
+    "properties": "Stary, zielony kapelusz, który jest symbolem wolności i wędrówki.",
+    "owner": "Włóczykij"
+  }
+]

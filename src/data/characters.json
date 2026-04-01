@@ -1,0 +1,48 @@
+[
+  {
+    "name": "Muminek",
+    "description": "Główny bohater, niezwykle uprzejmy i ciekawy świata. Kocha przygody, ale zawsze chętnie wraca do Domu Muminków.",
+    "species": "Muminek",
+    "isHibernating": false,
+    "bestFriend": "Włóczykij"
+  },
+  {
+    "name": "Włóczykij",
+    "description": "Wolny duch i filozof. Jesienią opuszcza Dolinę, by ruszyć na południe, ale zawsze wraca z pierwszą wiosenną melodią.",
+    "species": "Inny",
+    "isHibernating": false,
+    "bestFriend": "Muminek"
+  },
+  {
+    "name": "Mała Mi",
+    "description": "Najmniejsza, ale i najbardziej charakterna mieszkanka. Mówi zawsze to, co myśli, i niczego się nie boi.",
+    "species": "Miukk",
+    "isHibernating": false
+  },
+  {
+    "name": "Paszczak",
+    "description": "Zapalony kolekcjoner i botanik. Nie lubi, gdy przerywa mu się pracę nad klasyfikacją rzadkich okazów.",
+    "species": "Paszczak",
+    "isHibernating": false
+  },
+  {
+    "name": "Ryjek",
+    "description": "Przyjaciel Muminka, który bardzo lubi błyskotki i skarby. Często bywa lękliwy, ale ma dobre serce.",
+    "species": "Ryjek",
+    "isHibernating": true
+  },
+  {
+    "name": "Mama Muminka",
+    "description": "Ostoja spokoju i serce domu. Zawsze ma przy sobie torebkę pełną przydatnych rzeczy na każdą okazję.",
+    "species": "Muminek",
+    "isHibernating": false,
+    "bestFriend": "Tata Muminka"
+  },
+  {
+    "name": "Tata Muminka",
+    "description": "Wieczny marzyciel i pisarz. Uwielbia morze i często wspomina swoje burzliwe młode lata w pamiętnikach.",
+    "species": "Muminek",
+    "isHibernating": false,
+    "bestFriend": "Mama Muminka"
+  }
+]
