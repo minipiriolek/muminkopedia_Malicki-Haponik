@@ -13,7 +13,7 @@ export class CharacterService {
     }
 
     async getCharacterById(id: string | string[]): Promise<ICharacter> {
-        const character = await this.repository.findById(id);
+        const character = await this.repository.findById(id as string);
         if (!character) {
             throw new Error("Mieszkaniec nie figuruje w archiwum Paszczaka.");
         }
@@ -34,7 +34,7 @@ export class CharacterService {
     }
 
     async updateCharacter(id: string | string[], updateData: Partial<ICharacter>): Promise<ICharacter> {
-        const updatedCharacter = await this.repository.update(id, updateData);
+        const updatedCharacter = await this.repository.update(id as string, updateData);
         if (!updatedCharacter) {
             throw new Error("Nie można zaktualizować – nie znaleziono postaci o podanym ID.");
         }
@@ -42,7 +42,7 @@ export class CharacterService {
     }
 
     async deleteCharacter(id: string | string[]): Promise<void> {
-        const deleted = await this.repository.delete(id);
+        const deleted = await this.repository.delete(id as string);
         if (!deleted) {
             throw new Error("Nie można usunąć postaci, której nie ma w rejestrze.");
         }
