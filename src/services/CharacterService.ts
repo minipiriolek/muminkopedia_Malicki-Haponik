@@ -47,6 +47,10 @@ export class CharacterService {
             throw new Error("Nie można usunąć postaci, której nie ma w rejestrze.");
         }
     }
+
+     async fetchCharactersWithArtifacts() {
+        return await this.repository.getCharactersWithArtifacts();
+    }
 }
 
 export const characterService = new CharacterService();

@@ -79,3 +79,7 @@ Content-Type: application/json
 ###Delete artifact
 
 DELETE {{baseUrl}}/artifact/{{artifactId}}
+
+
+### Get characters with artifacts
+GET {{baseUrl}}/api/characters/with-artifacts

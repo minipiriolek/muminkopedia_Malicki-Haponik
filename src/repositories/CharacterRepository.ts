@@ -26,6 +26,22 @@ export class CharacterRepository {
     async delete(id: string): Promise<ICharacter | null> {
         return await Character.findByIdAndDelete(id);
     }
+
+
+    async getCharactersWithArtifacts() {
+        return Character.aggregate([
+            {
+                $lookup: {
+                    from: "artifacts",
+                    localField: "_id",
+                    foreignField: "owner",
+                    as: "artifacts"
+                }
+            }
+        ]);
+    }
 }
+
+
 
 export const characterRepository = new CharacterRepository();
