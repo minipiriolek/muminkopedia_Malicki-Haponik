@@ -4,7 +4,7 @@ import  app from '../app';
 import debug from 'debug';
 import http from 'http';
 import connectDB from "../config/db";
-import {seed} from "../data/seed.js"
+import {seed} from "../data/seed"
 
 // Get port from environment and store in Express.
 const port = normalizePort(process.env.PORT || '3000');

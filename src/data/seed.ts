@@ -1,5 +1,6 @@
 import Character from '../models/Character';
 import Artifact from '../models/Artifact';
+import { Types } from 'mongoose';
 
 export const seed = async () => {
     console.log("Start seeding...");
@@ -54,7 +55,7 @@ export const seed = async () => {
     ]);
 
     // ===== MAPA name -> _id =====
-    const map = {};
+    const map: Record<string, Types.ObjectId> = {};
     characters.forEach(c => {
         map[c.name] = c._id;
     });

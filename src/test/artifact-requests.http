@@ -1,6 +1,6 @@
 @baseUrl = http://localhost:5000
-@characterId = 69d56015acec92687c27fbb2
-
+@characterId = 69d602a1aed5e57fc54a7950
+@artifactId = 69d5ff1165f1904b4a9fee0f
 ###Get all characters
 
 GET {{baseUrl}}/api/characters
