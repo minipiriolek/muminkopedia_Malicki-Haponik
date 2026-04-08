@@ -4,6 +4,7 @@ import  app from '../app';
 import debug from 'debug';
 import http from 'http';
 import connectDB from "../config/db";
+import {seed} from "../data/seed.js"
 
 // Get port from environment and store in Express.
 const port = normalizePort(process.env.PORT || '3000');
@@ -18,6 +19,7 @@ const server = http.createServer(app);
 const start = async () => {
   try{
     await connectDB();
+    await seed();
     server.listen(port);// Listen on provided port, on all network interfaces.
     server.on('error', onError);
     server.on('listening', onListening);

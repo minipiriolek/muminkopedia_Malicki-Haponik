@@ -1,0 +1,85 @@
+@baseUrl = http://localhost:5000
+@characterId = 69d56015acec92687c27fbb2
+
+###Get all characters
+
+GET {{baseUrl}}/api/characters
+
+
+
+###Get character by ID
+
+GET {{baseUrl}}/api/characters/{{characterId}}
+
+
+
+###Create character
+
+POST {{baseUrl}}/api/characters
+Content-Type: application/json
+
+{
+"name": "Test Muminek",
+"description": "Testowa postać",
+"species": "Muminek",
+"isHibernating": false
+}
+
+
+
+###Update character
+
+PUT {{baseUrl}}/api/characters/{{characterId}}
+Content-Type: application/json
+
+{
+"description": "Zaktualizowany opis",
+"isHibernating": true
+}
+
+
+
+###Delete character
+
+DELETE {{baseUrl}}/api/characters/{{characterId}}
+
+
+
+###Get all artifacts
+
+GET {{baseUrl}}/artifact
+
+
+
+###Create artifact
+
+POST {{baseUrl}}/artifact
+Content-Type: application/json
+
+{
+"name": "Test Artefakt",
+"properties": "Testowe właściwości",
+"owner": "{{characterId}}"
+}
+
+
+
+###Update artifact
+
+PUT {{baseUrl}}/artifact/{{artifactId}}
+Content-Type: application/json
+
+{
+"name": "Zmieniony Artefakt",
+"properties": "Nowe właściwości"
+}
+
+
+
+###Delete artifact
+
+DELETE {{baseUrl}}/artifact/{{artifactId}}
+
+
+### Get characters with artifacts
+GET {{baseUrl}}/api/characters/with-artifacts
